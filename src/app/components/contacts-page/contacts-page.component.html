@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <mat-card class="contacts">
+      <mat-card-title>Contacts</mat-card-title>
+      <mat-list>
+        <a href="tel:380637831249" mat-list-item>
+          <mat-icon matListIcon>call</mat-icon>
+          <span matLine>
+            +38 (063) 78-312-49
+          </span>
+        </a>
+        
+        <a href="mailto:m-izmaylov@inbox.ru" mat-list-item>
+          <mat-icon matListIcon>mail</mat-icon>
+          <span matLine>
+            m-izmaylov@inbox.ru
+          </span>
+        </a>
+        <a href="skype:m-izmaylov?chat" mat-list-item>
+          <img src="/assets/skype.svg" matListIcon>
+          <span matLine>
+            m-izmaylov
+          </span>
+        </a>
+      </mat-list>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>My location</mat-card-title>
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+          <agm-info-window>I'm here</agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </mat-card>
+  </div>
+</div>

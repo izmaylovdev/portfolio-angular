@@ -1,0 +1,7 @@
+<div class="container">
+  <mat-card *ngIf="project" class="project">
+    <mat-card-title>{{ project.title }}</mat-card-title>
+    <img [src]="project.thumbURL" [alt]="project.title" class="project__img">
+    <span [innerHTML]="project.description"></span>
+  </mat-card>
+</div>

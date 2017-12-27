@@ -1,1 +1,213 @@
-/* You can add global styles to this file, and also import other style files */
+$headerTextColor: #efefef;
+
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.app{
+  width: 100%;
+}
+main{
+  padding-bottom: 30px;
+}
+
+.menu-trigger{
+  top: 12px;
+  left: 30px;
+  position: fixed !important;
+  background: rgba(0, 0, 0, .1)
+  mat-icon{
+    color: $headerTextColor;
+  }
+}
+
+.row{
+  display: flex;
+  margin: 20px 0;
+
+  .mat-card{
+    flex: 1;
+    margin: 0 10px;
+    flex-basis: 100%;
+  }
+  .contacts{
+    flex-basis: 300px;
+
+    .mat-list-item .mat-list-item-content{
+      padding: 0px;
+    }
+  }
+}
+
+.contacts{
+  
+  a{
+    text-decoration: none;
+
+    &:hover{
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.nav{
+  position: fixed;
+  top: 12px;
+  left: 30px;
+}
+
+.text{
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.sidenav{
+  min-width: 300px;
+}
+
+.photo{
+  max-width: 300px;
+  float: left;
+  margin: 0 20px 10px 0;
+}
+
+.header{
+  width: 100%;
+  background: #3f51b5;
+  color: $headerTextColor;
+  text-align: center;
+}
+
+.container{
+  width: 1600px;
+  max-width: 90%;
+  margin: auto;
+}
+
+mat-card{
+  margin-top: 20px;
+}
+
+.mat-list .mat-list-item{
+  min-height: 48px;
+  height: auto !important;
+}
+
+.mat-figure{
+  
+  &__img-wrap{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  figcaption{
+    font-size: 2em;
+    margin-top: 10px;
+    font-weight: 600;
+    line-height: 2em;
+  }
+}
+
+.skills{
+
+  .mat-figure &__thumb{
+    max-width: 90%;
+    max-height: 60%;
+  }
+
+  &__svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tooltip{
+  font-size: 1em;
+}
+
+.work{
+  cursor: pointer;
+
+  &__link{
+    text-decoration: none;
+    color: #222;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+
+  &:hover{
+    .work__img{
+      filter: grayscale(0%) sepia(0);
+      transform: translate3d(0,0,0) scale(1.0, 1.0);
+    }
+  }
+  .mat-figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img-wrap{
+    max-height: 500px;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+  }
+  &__img{
+    width: 100%;
+    filter: grayscale(90%) sepia(10%);
+    transform: translate3d(0,0,0) scale(1.0, 1.0);
+    transition: .2s;
+  }
+  &__title{
+    font-size: 2em;
+    margin-top: 10px;
+  }
+}
+
+.project{ 
+
+  &__img {
+    min-width: 300px;
+    width: 40%;
+    display: block;
+    float: left;
+    margin-right: 20px;
+  }
+
+  h2{ 
+    margin-top: 0px;
+  }
+
+  &:after{
+    clear: both;
+    content: '';
+    display: block;
+  }
+}

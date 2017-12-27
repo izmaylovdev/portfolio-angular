@@ -1,0 +1,49 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>About me</mat-card-title>
+      <mat-card-content>
+        <div class="text">
+          <img src="assets/photo.jpg" alt="Michael Izmaylov" class="photo">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis officiis nisi harum eos ad modi blanditiis, quo nobis, maxime dolore deserunt dolorem soluta impedit beatae sequi quam dolores nihil quisquam labore. Velit natus sint eos ut modi iusto molestiae illum fugiat incidunt dolor! Similique iure, vitae possimus nostrum mollitia neque?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ratione. Asperiores ex vero ducimus. Harum iure consequuntur vero minus cum, nobis quod ab placeat? Fuga voluptatem id ipsa expedita, mollitia illum obcaecati facilis eligendi, et iusto cupiditate quibusdam voluptates iure itaque. Nobis rerum impedit, deserunt iusto nostrum aliquam ratione earum fuga. Obcaecati tenetur, veniam minima blanditiis repellat ipsa omnis eos ullam officiis officia ab aspernatur dicta, fugiat excepturi! Similique labore ex nam dolores ducimus perferendis tenetur incidunt accusantium? Deserunt reprehenderit consequatur aperiam minima at quisquam officia magni? Quam suscipit itaque ipsa corporis accusantium, alias dignissimos doloremque consequatur facere, esse at.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia repellat dolorem nihil porro nam autem asperiores omnis ipsum minus deleniti.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores maxime ullam culpa animi voluptatem illo at minima minus? Cum, aut hic assumenda itaque placeat molestiae quaerat quos veritatis alias expedita enim a. Facere laborum neque, eum officia in cumque fuga aliquid fugiat sint ab vel! Deserunt hic repellat dolores sequi totam laborum nam est, optio saepe ipsum ipsam aspernatur molestiae recusandae! Repudiandae quam, facere omnis nesciunt sit ratione culpa deleniti vero eligendi numquam ab vel, praesentium ad quae dolorem reiciendis officia perferendis perspiciatis aspernatur soluta fugiat explicabo. Adipisci natus nam necessitatibus consectetur! Doloribus libero asperiores officia fugit. Iure quasi officiis nostrum? Adipisci perspiciatis pariatur culpa quis placeat voluptates officiis veritatis. Magni tenetur unde tempore voluptatum tempora, autem possimus ducimus iusto!</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>My skills</mat-card-title>
+      <mat-card-content *ngFor="let group of skills">
+        <mat-card-subtitle>{{ group.groupName }}</mat-card-subtitle>
+        <mat-grid-list class cols="7" rowHeight="1:1" class="skills">
+          <mat-grid-tile *ngFor="let skill of group.skills">
+            <div matTooltipClass="tooltip" [matTooltip]="skill.title" class="mat-figure__img-wrap">        
+              <img class="skills__thumb" [src]="skill.img" [alt]="skill.title">
+            </div>
+            <svg width="110" class="skills__svg" heigth="110" viewBox="0 0 110 110">
+              <circle cx="55" cy="55" r="50" stroke="#dfdcd5" stroke-width="3" fill="none"></circle>
+              <circle cx="55" 
+                      cy="55" 
+                      r="50" 
+                      [attr.opacity]="skill.level" 
+                      [attr.stroke-dashoffset]="314.1592653589793*(1-skill.level)" 
+                      stroke-dasharray="314.1592653589793"
+                      transform="rotate(-90,55,55)" 
+                      stroke="#00c853" stroke-width="3" 
+                      fill="none"></circle>
+              <circle cx="55"
+                      cy="55" r="50" 
+                      [attr.opacity]="1-skill.level" 
+                      [attr.stroke-dashoffset]="314.1592653589793*(1-skill.level)" 
+                      stroke-dasharray="314.1592653589793"
+                      transform="rotate(-90,55,55)" 
+                      stroke="#f00" 
+                      stroke-width="3" 
+                      fill="none"></circle>
+
+            </svg>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      </mat-card>
+    </div>
