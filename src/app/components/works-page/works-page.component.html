@@ -1,17 +1,13 @@
-<div class="container">
-  <mat-card>
-    <mat-card-title>My works</mat-card-title>
-    <mat-card-content>
-      <mat-grid-list cols="2" rowHeight="3:2">
-        <mat-grid-tile *ngFor="let work of works" class="work">
-          <a [routerLink]="['/work', work.id]" class="work__link">
-            <div class="work__img-wrap">
-              <img [src]="work.thumbURL" [alt]="work.title" class="work__img">
-            </div>
-            <span class="work__title">{{ work.title }}</span>
-          </a>
-        </mat-grid-tile>
-      </mat-grid-list>
+<div class="container works">
+  <mat-card *ngFor="let work of works" class="work">
+    <mat-card-title>{{ work.title }}</mat-card-title>
+    <div class="work__img-wrap" [perfectScrollbar]>
+      <img mat-card-img [src]="work.thumbURL" [alt]="work.title" class="work__img">
+    </div>
+    <mat-card-content class="work__text" [innerHTML]="work.description">
     </mat-card-content>
+    <mat-card-actions class="work__buttons">
+      <a class="work__link" [href]="work.url" target="_blank" mat-button>Open</a>
+    </mat-card-actions>
   </mat-card>
 </div>

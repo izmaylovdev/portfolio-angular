@@ -16,6 +16,7 @@ import {
   query,
   stagger
 } from '@angular/animations';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-root',
@@ -86,11 +87,11 @@ import {
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   constructor ( private route: ActivatedRoute, private router: Router, private title: Title ) {}
 
-  onInit () {
+  ngOnInit () {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
       .map(() => this.route)
@@ -98,12 +99,13 @@ export class AppComponent {
         while (route.firstChild) {
           route = route.firstChild;
         }
+        console.log(route);
         return route;
       })
       .filter((route) => route.outlet === 'primary')
       .mergeMap((route) => route.data)
       .subscribe(({ title }) => {
-        this.title.setTitle(`${title}`);
+        this.title.setTitle(`Izmaylovdev - ${title}`);
       });
   }
 

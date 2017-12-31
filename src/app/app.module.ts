@@ -9,6 +9,7 @@ import { WorksPageComponent } from './components/works-page/works-page.component
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ContactsPageComponent } from './components/contacts-page/contacts-page.component';
 
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { AgmCoreModule } from '@agm/core';
 
 
@@ -24,7 +25,6 @@ import {
   MatGridListModule,
   MatTooltipModule
 } from '@angular/material';
-import { ProjectPageComponent } from './components/project-page/project-page.component';
 import { DataService } from './data.service';
 
 
@@ -34,8 +34,7 @@ import { DataService } from './data.service';
     AppComponent,
     WorksPageComponent,
     HomePageComponent,
-    ContactsPageComponent,
-    ProjectPageComponent
+    ContactsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +49,7 @@ import { DataService } from './data.service';
     MatCardModule,
     MatGridListModule,
     MatTooltipModule,
+    PerfectScrollbarModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDAdHz2oxEuk2KacNBIViBar64cy1fuQuw'
     })

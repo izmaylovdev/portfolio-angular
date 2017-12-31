@@ -29,6 +29,17 @@ main{
     color: $headerTextColor;
   }
 }
+.nav{
+  position: fixed;
+  top: 12px;
+  left: 30px;
+}
+
+@media screen and (max-width: 600px){
+  .menu-trigger, .nav{
+    top: 8px;
+  }
+}
 
 .row{
   display: flex;
@@ -47,6 +58,15 @@ main{
     }
   }
 }
+@media screen and (max-width: 768px){
+  .row{
+    flex-direction: column;
+
+    .mat-card:not(:first-child){
+      margin-top: 15px;
+    }
+  }
+}
 
 .contacts{
   
@@ -59,12 +79,6 @@ main{
       }
     }
   }
-}
-
-.nav{
-  position: fixed;
-  top: 12px;
-  left: 30px;
 }
 
 .text{
@@ -148,8 +162,18 @@ mat-card{
   font-size: 1em;
 }
 
+.works{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .work{
   cursor: pointer;
+  width: 49%;
+  flex-basis: 49%;
+  display: flex !important;
+  flex-direction: column;
 
   &__link{
     text-decoration: none;
@@ -161,12 +185,10 @@ mat-card{
     height: 100%;
   }
 
-  &:hover{
-    .work__img{
-      filter: grayscale(0%) sepia(0);
-      transform: translate3d(0,0,0) scale(1.0, 1.0);
-    }
+  &__buttons{
+    margin-top: auto;
   }
+
   .mat-figure{
     display: flex;
     flex-direction: column;
@@ -174,20 +196,65 @@ mat-card{
   }
 
   &__img-wrap{
-    max-height: 500px;
+    height: 500px;
     overflow: hidden;
     width: 90%;
     margin: auto;
+    
+    &:hover{
+      .work__img{
+        filter: grayscale(0%) sepia(0);
+        transform: translate3d(0,0,0) scale(1.0, 1.0);
+      }
+    }
   }
   &__img{
     width: 100%;
-    filter: grayscale(90%) sepia(10%);
+    filter: grayscale(50%) sepia(10%);
     transform: translate3d(0,0,0) scale(1.0, 1.0);
     transition: .2s;
+  }
+  &__img-wrap{
+    width: 100%;
+    max-height: 450px;
+    margin: 0px;
+
+    div{
+      display: none;
+    }
   }
   &__title{
     font-size: 2em;
     margin-top: 10px;
+  }
+  &__text{
+    margin-top: 15px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  .work__img-wrap{
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1024px){
+  .work{
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .work__img-wrap{
+    height: 400px;
+  }
+}
+@media screen and (max-width: 768px){
+  .work__img-wrap{
+    height: 300px;
+  }
+}
+@media screen and (max-width: 500px){
+  .work__img-wrap{
+    height: 250px;
   }
 }
 
@@ -199,10 +266,6 @@ mat-card{
     display: block;
     float: left;
     margin-right: 20px;
-  }
-
-  h2{ 
-    margin-top: 0px;
   }
 
   &:after{
