@@ -16,6 +16,7 @@ export class HomePageComponent implements OnInit {
           { title: 'CSS', img: '/assets/css.svg', level: 1 },
           { title: 'JavaScript', img: '/assets/js.png', level: .7 },
           { title: 'Angular', img: '/assets/angular.svg', level: .7 },
+          { title: 'React', img: '/assets/react.svg', level: .7 },
           { title: 'Vue.js', img: '/assets/vue.png', level: .3 },
           { title: 'Jasmine.js', img: '/assets/jasmine.svg', level: .6 },
           { title: 'SVG', img: '/assets/svg.png', level: .5 }

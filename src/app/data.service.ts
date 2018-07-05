@@ -10,19 +10,8 @@ export class DataService {
         id: 0,
         title: 'International Monopoly of Reality',
         description: `
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis illo vel qui totam adipisci
-          facilis! Dicta veniam, deserunt aliquid magnam vitae a doloremque tempore ipsum. Soluta veritatis
-          obcaecati id nam, quaerat perspiciatis maxime accusamus. Temporibus ex aspernatur cupiditate modi inventore
-          ipsam mollitia explicabo alias, repudiandae velit ratione quidem praesentium.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis illo vel qui totam adipisci
-          facilis! Dicta veniam, deserunt aliquid magnam vitae a doloremque tempore ipsum. Soluta veritatis
-          obcaecati id nam, quaerat perspiciatis maxime accusamus. Temporibus ex aspernatur cupiditate modi inventore
-          ipsam mollitia explicabo alias, repudiandae velit ratione quidem praesentium. Soluta veritatis
-          obcaecati id nam, quaerat perspiciatis maxime accusamus. Temporibus ex aspernatur cupiditate modi inventore
-          ipsam mollitia explicabo alias, repudiandae velit ratione quidem praesentium.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis illo vel qui totam adipisci
-          facilis! Dicta veniam, deserunt aliquid magnam vitae a doloremque tempore ipsum. Soluta veritatis
-          obcaecati id nam, quaerat perspiciatis maxime accusamus.</p>
+          <p>Create two SPA. First for the personal cabinet, and the second for the admin panel.
+          I maintended this project for several months.</p>
         `,
         thumbURL: '/assets/works/imr.png',
         url: 'http://my.imr.world'
@@ -31,19 +20,20 @@ export class DataService {
         id: 1,
         title: 'Product Manager',
         description: `
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis illo vel qui totam adipisci
-          facilis! Dicta veniam, deserunt aliquid magnam vitae a doloremque tempore ipsum. Soluta veritatis
-          obcaecati id nam, quaerat perspiciatis maxime accusamus. Temporibus ex aspernatur cupiditate modi inventore
-          ipsam mollitia explicabo alias, repudiandae velit ratione quidem praesentium.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis illo vel qui totam adipisci
-          facilis! Dicta veniam, deserunt aliquid magnam vitae a doloremque tempore ipsum. Soluta veritatis
-          obcaecati id nam, quaerat perspiciatis maxime accusamus. Temporibus ex aspernatur cupiditate modi inventore
-          ipsam mollitia explicabo alias, repudiandae velit ratione quidem praesentium. Soluta veritatis
-          obcaecati id nam, quaerat perspiciatis maxime accusamus. Temporibus ex aspernatur cupiditate modi inventore
-          ipsam mollitia explicabo alias, repudiandae velit ratione quidem praesentium.</p>
+          <p>Create SPA for learning and testing.</p>
+          <p>Email for access: m-izmaylov@inbox.ru</p>
         `,
         thumbURL: '/assets/works/mg.png',
         url: 'http://mg.new-norm.pro'
+      },
+      {
+        id: 2,
+        title: 'SkyWay',
+        description: `
+          <p>Create responsive HTML layout and JS scripts for UI elements.</p>
+        `,
+        thumbURL: '/assets/works/skyway.png',
+        url: 'http://skyway.new-norm.pro/'
       }
     ];
   }

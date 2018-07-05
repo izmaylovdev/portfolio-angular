@@ -61,7 +61,7 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
           { optional: true }
         ),
         query(':enter .skills mat-grid-tile',
-          stagger(100, [
+          stagger(50, [
             style({ transform: 'translateY(30px)', opacity: 0 }),
             animate('1s ease-in-out',
               style({
